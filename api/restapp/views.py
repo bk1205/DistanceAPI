@@ -28,9 +28,9 @@ class GetDistance(APIView):
             dist = getDistance(loc1, loc2)
 
             response = {
-                'city1': city1,
-                'city2': city2,
-                'distance_in_kms': dist
+                'city1': city1.title(),
+                'city2': city2.title(),
+                'distance': f'{dist} km'
             }
 
             serializer = DistanceSerializer(data=response)

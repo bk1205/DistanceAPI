@@ -10,6 +10,6 @@ class Distance(models.Model):
     id = models.AutoField(primary_key=True)
     city1 = models.CharField(max_length=100)
     city2 = models.CharField(max_length=100)
-    dist = models.FloatField()
+    distance = models.CharField(max_length=100)
     class Meta:
         unique_together = ('city1', 'city2')
